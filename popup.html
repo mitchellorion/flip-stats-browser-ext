@@ -14,6 +14,17 @@
       <button id="reset" class="danger">Reset</button>
     </div>
     <p id="status"></p>
+
+    <hr />
+    <h2>Merge previous exports</h2>
+    <p class="hint">
+      Each download only holds the site's most recent window of data. Pick
+      two or more previously downloaded JSON files to combine them into one
+      deduped file (matched by each record's own id where available).
+    </p>
+    <input type="file" id="mergeFiles" accept="application/json" multiple />
+    <button id="merge">Merge &amp; Download</button>
+
     <script src="popup.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-  width: 260px;
+  width: 320px;
   font-family: system-ui, sans-serif;
   padding: 12px;
   margin: 0;
@@ -8,6 +8,29 @@ body {
 h1 {
   font-size: 14px;
   margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 12px;
+  margin: 0 0 6px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 14px 0;
+}
+
+.hint {
+  font-size: 11px;
+  color: #666;
+  margin: 0 0 8px;
+}
+
+input[type="file"] {
+  font-size: 11px;
+  width: 100%;
+  margin-bottom: 8px;
 }
 
 #stats {

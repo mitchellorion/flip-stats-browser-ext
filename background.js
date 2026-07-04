@@ -7,6 +7,9 @@ const STORE = "calls";
 const CATEGORY_RULES = [
   { name: "transactions", test: (url) => /\/transactions(\/|\?|$)/i.test(url) },
   { name: "vip", test: (url) => /\/vip(\/|\?|$)/i.test(url) },
+  // Must stay after the two rules above: /api/user/transactions and
+  // /api/user/vip would otherwise also match this broader /user pattern.
+  { name: "user", test: (url) => /\/user(\/|\?|$)/i.test(url) },
 ];
 
 function categorize(url) {
