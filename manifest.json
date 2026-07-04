@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Flip.gg API Logger",
+  "version": "0.1.0",
+  "description": "Captures flip.gg API responses (transactions, VIP, etc.) into categorized JSON logs you can download.",
+  "permissions": ["downloads"],
+  "host_permissions": [
+    "https://flip.gg/*",
+    "https://*.flip.gg/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://flip.gg/*", "https://*.flip.gg/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["interceptor.js"],
+      "matches": ["https://flip.gg/*", "https://*.flip.gg/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Flip.gg API Logger"
+  }
+}
